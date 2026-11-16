@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ryoの自己紹介</title>
+  <style>
+    /* ===== 全体の色や文字の設定 ===== */
+    :root {
+      --bg: #f0f8fc;          /* 背景：ごく薄い水色 */
+      --card: #ffffff;        /* 本文エリアの背景：白 */
+      --main: #2b8fbf;        /* メインの水色（見出しの線・リンク） */
+      --main-dark: #1d6a8f;   /* 濃い水色（リンクにカーソルを合わせたとき） */
+      --text: #23333d;        /* 本文の文字色 */
+      --sub: #5b6f7a;         /* 補足の文字色 */
+      --line: #d3e7f1;        /* 区切り線の色 */
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* ===== ページ全体の幅 ===== */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    /* ===== 上部（タイトルとメニュー） ===== */
+    header {
+      border-bottom: 3px solid var(--main);
+      padding-bottom: 16px;
+      margin-bottom: 32px;
+    }
+
+    .site-label {
+      margin: 0;
+      color: var(--main);
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 0.12em;
+    }
+
+    h1 {
+      margin: 4px 0 16px;
+      font-size: 32px;
+      line-height: 1.3;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;        /* 狭い画面では折り返す */
+      gap: 8px 20px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    /* ===== リンク ===== */
+    a {
+      color: var(--main);
+      overflow-wrap: anywhere; /* 長いURLが画面からはみ出さないようにする */
+    }
+
+    a:hover {
+      color: var(--main-dark);
+    }
+
+    /* ===== 各セクション ===== */
+    section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      padding-left: 12px;
+      border-left: 5px solid var(--main);
+      font-size: 22px;
+      line-height: 1.4;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    ul.study-list {
+      margin: 0;
+      padding-left: 1.4em;
+    }
+
+    ul.study-list li {
+      margin-bottom: 8px;
+    }
+
+    .label {
+      font-weight: bold;
+    }
+
+    /* ===== 狭い画面（スマートフォンなど）のとき ===== */
+    @media (max-width: 600px) {
+      .container {
+        padding: 24px 16px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      h2 {
+        font-size: 19px;
+      }
+
+      section {
+        padding: 18px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <p class="site-label">MY WEBSITE</p>
+      <h1>ryoの自己紹介</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">自己紹介</a></li>
+          <li><a href="#study">今学んでいること</a></li>
+          <li><a href="#future">これからやってみたいこと</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2>自己紹介</h2>
+        <p>はじめまして、ryoです。音楽を聴くのが好きで、好きなアーティストは川崎鷹也です。</p>
+        <p>好きな食べ物はサツマイモとあんこです。合唱サークルでベースのパートをやっています。</p>
+        <p>川崎鷹也さんについては、<a href="https://kawasaki-takaya.com" target="_blank" rel="noopener noreferrer">川崎鷹也公式サイト</a>で見られます。</p>
+      </section>
+
+      <section id="study">
+        <h2>今学んでいること</h2>
+        <p>英語、プログラミング、情報工学を学んでいます。</p>
+        <ul class="study-list">
+          <li><span class="label">英語：</span>TOEICに向けて、『新英文法大全』という文法書で勉強しています。</li>
+          <li><span class="label">プログラミング：</span>授業でC言語のプログラミングをしました。</li>
+          <li><span class="label">情報工学：</span>計算機工学などの授業で、コンピュータの仕組みを知れたことが面白かったです。</li>
+        </ul>
+      </section>
+
+      <section id="future">
+        <h2>これからやってみたいこと</h2>
+        <p>ウェブサイトやアプリを作ってみたいです。</p>
+      </section>
+    </main>
+
+  </div>
+</body>
+</html>
